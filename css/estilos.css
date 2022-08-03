@@ -1,0 +1,422 @@
+  *{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+    font-family: 'Neonderthaw', cursive;
+  	}
+
+	/*Estilos para el encabezado*/
+  .header{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+.container .btn-menu, .logo{
+    float: left;
+    line-height:100px;
+}
+.container .btn-menu label{
+    color: rgb(209, 209, 209);
+    font-size: 25px;
+    cursor: pointer;
+}
+.logo h1{
+    color: rgb(209, 209, 209);
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 10px;
+}
+.container .menu{
+    float: right;
+    line-height: 100px;
+}
+.container .menu a{
+    display: inline-block;
+    padding: 15px;
+    line-height: normal;
+    text-decoration: none;
+    color: rgb(49, 48, 48);
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 17px;
+    margin-right: 5px;
+}
+.container .menu a:hover{
+    border-bottom: 2px solid #965454;
+    padding-bottom: 5px;
+}
+#btn-menu{
+    display: none;
+}
+.container-menu{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu{
+    opacity: 1;
+    visibility: visible;
+}
+.cont-menu{
+    width: 100%;
+    max-width: 250px;
+    background: #1a1919e1;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+    transform: translateX(0%);
+}
+.cont-menu nav{
+    transform: translateY(15%);
+}
+.cont-menu nav a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+    border-left: 5px solid #965454;
+    background: #1f1f1f;
+}
+.cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+.img-header{
+  background: url(../img/fondoo.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(54, 54, 54, 0.6);
+  background-blend-mode: soft-light;
+
+  position: relative;
+  width: 100%;
+  height:100vh;
+}
+.img-header .welcome{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+}
+.img-header .welcome h4{
+  color: #ffff;
+  font-weight: 400;
+  font-size: 150px;
+  text-align: center;
+}
+.welcome form{
+  width: 380px;
+  max-width: 100%;
+  position: relative;
+}
+.welcome form input:first-child{
+  display: inline-block;
+  width: 100%;
+  padding: 14px 130px 14px 15px;
+  border: 2px solid #f9004d;
+  outline: none;
+  border-radius: 30px;
+}
+.welcome form input:last-child{
+  position: absolute;
+  display: inline-block;
+  outline: none;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 30px;
+  background-color:#965454;
+  color: white;
+  box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+  top: 6px;
+  right: 6px; 
+}
+
+
+
+	/*Fin de Menù lateral*/
+
+
+*{
+    box-sizing: border-box;
+  }
+  section{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 0;
+    background-color: #0a0a0af5;
+  }
+  section h2{
+    width: 100%;
+    padding: 2%;
+    font-size: 50px;
+    color: #999;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card{
+    width: 33.333333%;
+  }
+  
+  /* Estilo A */
+  .Novedades img{
+    width: 100%;
+    padding: 3%;
+  }
+  .estilo-a{
+    font-family: sans-serif;
+    color: #fff;
+  }
+  .estilo-a a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  .estilo-a a:hover{
+    text-decoration: underline;
+  }
+  .estilo-a .img-container{
+    overflow: hidden;
+    height: 400px;
+    position: relative;
+  }
+  .estilo-a .img-container img{
+    width: 100%;
+    position: absolute;
+    top: -25%;
+    transition: all 0.5s;
+  }
+  .estilo-a:hover .img-container img{
+    transform: scale(1.2);
+  }
+  
+  /* Estilo B */
+  .Tendencias img{
+    width: 100%;
+    padding: 3%;
+  }
+  .estilo-b{
+    font-family: sans-serif;
+    text-align: center;
+    color: #fff;
+  }
+  .estilo-b .img-container{
+    overflow: hidden;
+    position: relative;
+  }
+  .estilo-b .img-container img{
+    width: 500px;
+    height: 600px;
+  }
+  .estilo-b .img-container .price{
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    font-size: 20px;
+    background: rgba(226, 122, 122, 0.753);
+    padding: 15px;
+    border-radius: 15px;
+  }
+  .estilo-b .img-container .favorite{
+    position: absolute;
+    bottom: 10px;
+    right: 70px;
+    background: white;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+  }
+  .estilo-b .img-container .favorite svg{
+    transform: translatey(14px);
+  }
+  .estilo-b .img-container .favorite:hover{
+    background: red;
+  }
+  .estilo-b .img-container .favorite:hover svg{
+    fill: white;
+  }
+  .estilo-b a{
+    display: inline-block;
+    margin-top: 2px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(249, 0, 77);
+    border-radius: 25px;
+    padding: 15px;
+    border: 3px solid black;
+  }
+  .estilo-b a:hover{
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border: 3px solid rgb(249, 0, 77);
+    transition: all 0.4s ease 0s;
+  }
+  
+  /*Estilo C*/
+  .Rebajas img{
+    width: 100%;
+    padding: 3%;
+  }
+  .estilo-c{
+    font-family: sans-serif;
+    width: 30%;
+    color: #fff;
+  }
+  .estilo-c .img-container{
+    overflow: hidden;
+    height: 250px;
+    position: relative;
+    border-radius: 15px;
+  }
+  .estilo-c .img-container img{
+    width: 105%;
+    position: absolute;
+    top: -60%;
+    transition: all 0.5s;
+  }
+  .estilo-c:hover .img-container img{
+    transform: scale(1.2);
+  }
+  .estilo-c .img-container .promo{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 20px;
+    background: rgba(245, 245, 99, 0.863);
+    padding: 15px;
+    color: black;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+  .estilo-c .info-container{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+  }
+  .estilo-c .info-container h3{
+    margin: 0;
+  }
+  .estilo-c .info-container h3,
+  .estilo-c .info-container strong,
+  .estilo-c .info-container span{
+    padding: 5px 15px;
+    width: 100%;
+  }
+  .estilo-c .add-cart{
+    margin-top: 2px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(249, 0, 77);
+    padding: 15px;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 25px;
+  }
+  .estilo-c .add-cart:hover{
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border: 3px solid rgb(249, 0, 77);
+    transition: all 0.4s ease 0s;
+  }
+  ul {
+    display: flex;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1f1f1f;
+  }
+  
+  ul li {
+    list-style: none;
+  }
+  
+  ul li a {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 80px;
+    font-size: 35px;
+    margin: 10px 10px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+  }
+  
+  ul li a .icon {
+    position: relative;
+    color: #262626;
+    transition: .5s;
+    z-index: 3;
+  }
+  
+  ul li a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+  }
+  
+  ul li a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: .5s;
+    z-index: 2;
+  }
+  
+  ul li a:hover:before {
+    top: 0;
+  }
+  
+  ul li:nth-child(1) a:before{
+    background: #3b5999;
+  }
+  
+  ul li:nth-child(2) a:before{
+    background: #55acee;
+  }
+  
+  ul li:nth-child(3) a:before {
+    background: #0077b5;
+  }
+  
+  ul li:nth-child(4) a:before {
+    background: #dd4b39;
+  }
+  
